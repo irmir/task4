@@ -112,7 +112,7 @@ async function getList() {
 
             ulMenu.onclick = function doChangeOrAddOrSave(event) {
                 if (event.target.className === 'change') {
-                    inputEl = document.createElement('input');
+                    const inputEl = document.createElement('input');
                     inputEl.value = target.previousElementSibling.innerText;
                     const coord = target.previousElementSibling.getBoundingClientRect();
                     inputEl.style.width = `${coord.width}px`;
@@ -121,7 +121,7 @@ async function getList() {
                     target.parentNode.firstElementChild.parentNode.removeChild(target.parentNode.firstElementChild);
                 }
                 if (event.target.className === 'save') {
-                    liEl = document.createElement('li');
+                    const liEl = document.createElement('li');
                     spanEl = liEl.appendChild(document.createElement('span'));
                     spanEl.innerText = inputEl.value;
                     liEl.style.width = "auto";
